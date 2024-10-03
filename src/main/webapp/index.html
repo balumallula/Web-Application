@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+     
+    <title>Log in</title>
+    <style>
+        body{
+             background-image: url(./bg6.jpg);
+             background-size:cover;
+             
+             color:white;
+             font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+             /* text-align:center; */
+         }
+        nav img{
+          /* background-color: transparent; */
+          height: 90px;
+          width: 9%;
+           float: left;
+           align-items: center;
+        }
+        .img1 img{
+            height: 490px;
+            width: 100%;
+            /* background-color: transparent; */
+            padding-left: 40px;
+            padding-top: 35px;
+           
+        }
+        label{
+        font-size: 18px;
+       }
+       
+        
+        .navbar{
+            overflow: hidden;  
+             text-align:center;
+             color: white;
+             align-items: baseline;
+             /* padding: 20px; */
+            background-color:#1F2D5A;
+                align-items: center;
+            display: flex;
+            justify-content: center;
+          }
+        
+        .padd {
+            /* padding-top: 15px; */
+            padding-bottom: 12px;  
+        }
+        .padd1 {
+            padding-top: 15px;
+            /* padding-bottom: 12px;   */
+        }
+        
+        .al {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .btn{
+           /* background-image: url(./bg6.jpg);
+            background-size:cover;*/
+             background-color:white;
+             color: #1F2D5A;
+             border-radius: 2px;
+             height: 42px;
+             width: 48%;
+             font-size:28px;
+             font-weight:bolder;
+             margin: 20px;
+             padding: 3px;
+              
+         }
+         .btn:hover{
+          color: #1F2D5A;
+          border:solid 2px black;         
+         }
+        
+       form{
+        /* background-image: url(./bg6.jpg); */
+         overflow: hidden;
+        width: 80%;
+         border-color: white;
+         border-radius: 10px;
+         
+       }
+
+       /* .box{
+        background-color: aliceblue;
+       } */
+
+       #passwordForm{
+        padding: 30px;
+       }
+
+       .brc{
+        border-color: black;
+       }
+       
+        h2{
+            text-align: center;
+            color:white;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         }
+        nav h1{
+            font-family: "Major Mono Display", monospace;
+        }
+      
+        .container{
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             padding:30px;
+             overflow: hidden;
+        }
+        
+       footer{
+        height: 39px;
+        background-color:#1F2D5A;
+       }
+       marquee h5{
+            
+            font-family: "Major Mono Display", monospace;
+
+        }
+
+        #password{
+        position: relative;
+       }
+       
+       .img2 img{
+        position: absolute;
+        left: 220px;
+        height: 37px;
+        width: 15%;
+        margin-top: -38px;
+        /* float: right; */
+         margin-right: 7px;
+         cursor: pointer;
+         padding: 10px;
+       }
+       a{
+         margin-top: 10px;
+        /* margin-left: 180px; */
+        
+        float: right;
+       }
+
+       a:hover{
+        text-decoration: none;
+       }
+       .bg{
+        background-color:#1F2D5A;
+      
+       }
+
+       .pad1{
+        padding: 20px;
+        border-radius: 10px;
+        
+
+       }
+
+       .form-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:#1F2D5A;
+        
+        
+       }
+
+       
+
+     
+ 
+    </style>
+</head>
+<body>
+         
+    <nav class=" navbar">
+        <img src="./vcube-logo.png" alt="">
+       <h1>Vcube Software Solutions</h1>
+     </nav> 
+       
+       <div class="container">
+       
+         <div class="row">
+                <div class="col-md-6 img1 form-box">
+                <img src="./img1.png" alt="login">
+                </div>
+                <div class="col-md-6 img1 form-box">
+                 <form id="passwordForm" class="form-group" name="Login" method="post" action="Login">
+                   
+                    <h2>Log in</h2>
+                    <hr>
+                    <div class="row padd">
+                        <div class="col-md-12">
+                            <label for="UserName">User Name</label>
+                            <input class="form-control brc" type="text" name="adm_username" id="username" placeholder="username" required maxlength="15">
+                        </div>
+                    </div>
+                    
+
+                    <div class="row padd">    
+                        <div class="col-md-12 img2">
+                            <label for="password">Password</label>
+                            <input class="form-control brc" type="password" name="adm_password" id="password" placeholder="password" required maxlength="10">
+                            <img src="./eye-close.png" class="eye" alt="" id="eye" onclick="show()">
+                            <a href="./forgotPass.html">Forgotten your password?</a>
+                             
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+	                     <div class="col-md-12">
+	                            <label for="login">Who're Log in</label>
+	                            <select class="form-control" name="login" id="login" required>
+	                                <option value=""> Select</option>
+	                                <option value="Admin">Admin</option>
+	                                <option value="Faculty">Faculty</option>
+	                                <option value="Student">Student</option>
+	                              </select>
+	                      </div>        
+                       </div>
+                            <div class="row al">
+                                <button type="submit" class="btn  ">LOGIN</button>
+                            </div>
+                   </form>
+               </div>
+            </div>
+        </div>
+    </div> 
+            
+</body>
+<footer>
+    <marquee behavior="" direction="right"><h5>@Satya_Vcube</h5></marquee>
+</footer>
+<script>
+    let pass = document.getElementById("password");
+    let eye = document.getElementById("eye");
+
+    function  show(){
+        if(password.type == "password"){
+           password.type ="text";
+           eye.src = "eye-open.png";
+        }
+        else{
+            password.type = "password";
+            eye.src = "eye-close.png";
+        }
+    }
+
+</script>
+</html>
